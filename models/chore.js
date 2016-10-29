@@ -9,6 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         models.chore.belongsTo(models.roommate);
+        models.chore.belongsTo(models.task);
       }
     }
   });
