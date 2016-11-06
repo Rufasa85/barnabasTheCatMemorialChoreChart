@@ -18,10 +18,20 @@ app.get('/about', function(req, res) {
     res.render('about')
 });
 
-app.get('/new', function(req, res) {
+app.route('/newuser').get( function(req, res) {
     //should be one time use
-    res.render('new')
+    res.render('newuser')
+}).post(function(req,res) {
+    res.send(req.body.params)
 });
+
+app.route('/newtask').get( function(req, res) {
+    //should be one time use
+    res.render('newtask')
+}).post(function(req,res) {
+    res.send(req.body.params)
+});
+
 
 app.route('/edit').get(function(req,res){
     //hide it doooood
