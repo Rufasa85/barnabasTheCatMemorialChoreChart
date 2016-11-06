@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var chore = sequelize.define('chore', {
-    task: DataTypes.STRING,
+    taskId: DataTypes.INTEGER,
     date: DataTypes.DATE,
     roommateId: DataTypes.INTEGER,
     complete: DataTypes.BOOLEAN

@@ -1,3 +1,4 @@
+var db = require('./models');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -22,14 +23,14 @@ app.route('/newuser').get( function(req, res) {
     //should be one time use
     res.render('newuser')
 }).post(function(req,res) {
-    res.send(req.body.params)
+    res.send(req.body)
 });
 
 app.route('/newtask').get( function(req, res) {
     //should be one time use
     res.render('newtask')
 }).post(function(req,res) {
-    res.send(req.body.params)
+    res.send(req.body)
 });
 
 
